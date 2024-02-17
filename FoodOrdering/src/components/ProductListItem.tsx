@@ -13,7 +13,8 @@ export const defaultImage = 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com
 
 const ProductListItem = ({ product}: ProductListItemProp)=> {
   return (
-    <Link href={`/${product.id}`} asChild>
+    //It's product.id in the tutorial but I like name better.
+    <Link href={`/menu/${product.name}`} asChild> 
       <Pressable style={styles.container}>
         <Image source={{ uri: product.image || defaultImage}} style = {styles.image} resizeMode='contain'/> 
         <Text style = {styles.title}>{product.name}</Text>
