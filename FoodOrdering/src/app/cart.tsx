@@ -1,10 +1,17 @@
-import {View, Text} from "react-native";
+import {View, Text, Platform} from "react-native";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 
+import { useCart } from "../providers/CartProvider";
 const CartScreen = () => {
+    const {items} = useCart();
     return(
         <View>
-            <Text>cart</Text>
+            <Text>Cart items length: {items.length}</Text>
+
+            <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+            <StatusBar style={Platform.OS === "android" ? 'light' : 'auto'} />
+            
         </View>
     );
 };
