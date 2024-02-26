@@ -8,5 +8,5 @@ export function useClientOnlyValue<S, C>(server: S, client: C): S | C {
     setValue(client); // when the client value changes, set the value to the new value
   }, [client]);
 
-  return value; //return the new value either as a client value or server value
+  return value; //return the new value either as a client value or server value.
 }
