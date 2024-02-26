@@ -7,10 +7,12 @@ import { defaultImage } from './ProductListItem';
 import { FontAwesome } from '@expo/vector-icons';
 import { useCart } from '../providers/CartProvider';
 
+//  component props for all items in the cart list
 type CartListItemProps = {
   cartItem: CartItem;
 };
 
+// This creates the page for the checkout menu. It is a simple display of all items in the user's cart with options to remove or edit
 const CartListItem = ({ cartItem }: CartListItemProps) => {
   const {} = useCart();
   return (
@@ -47,6 +49,7 @@ const CartListItem = ({ cartItem }: CartListItemProps) => {
   );
 };
 
+// creates the style for the checkout menu
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',

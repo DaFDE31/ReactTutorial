@@ -24,6 +24,7 @@ const ProductListItem = ({ product}: ProductListItemProp)=> {
     </Link>
 )}
 
+// Style sheet for the ProductListItem
 export default ProductListItem
 const styles = StyleSheet.create({
   container: {
