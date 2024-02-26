@@ -7,10 +7,12 @@ import { Text, View } from './Themed';
 
 import Colors from '../../src/constants/Colors';
 
+// This is a simple container component that wraps some text and an external link.
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
+        
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
@@ -46,6 +48,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
   );
 }
 
+// This style sheet is used to edit the looks for the EditScreenInfo component
 const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
