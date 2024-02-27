@@ -45,7 +45,12 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
+  /* 
+  This function switches between light mode and dark mode
+  depending on the system of device. 
+  */
 function RootLayoutNav() {
+
   const colorScheme = useColorScheme();
 
   return (

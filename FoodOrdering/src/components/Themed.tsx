@@ -34,12 +34,14 @@ export function Text(props: TextProps) {  //custom text component modifying text
   const { style, lightColor, darkColor, ...otherProps } = props; // destructure of props. Seperating style, light color, dark color and otherProps.
   const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text'); //using useThemeColor hook to retrieve text color based on light or dark mode.
 
+
   return <DefaultText style={[{ color }, style]} {...otherProps} />; // Merge default style with color style and go to the other props.
 }
 
 export function View(props: ViewProps) { // custom view component using useThemeColor for the background.
   const { style, lightColor, darkColor, ...otherProps } = props; // constant destruction of props. Seperating style, lightColor, darkColor and otherProps.
   const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background'); // uses useThemeColor function to get the background color depending on the light/dark mode
+
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />; // combines default and backgroundColor style and sends to other props 
 }
